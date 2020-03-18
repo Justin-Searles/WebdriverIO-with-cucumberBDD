@@ -1,7 +1,7 @@
 import Page from './page';
 import utl   from '../../utilities/common-utilities';
 
-class LoginPage extends Page {
+class HomePage extends Page {
 
     /**
     * define elements
@@ -16,7 +16,7 @@ class LoginPage extends Page {
      * define or overwrite page methods
      */
     open () {
-        super.open('login')       //this will append `login` to the baseUrl to form complete URL
+        super.open('')       //this will append `login` to the baseUrl to form complete URL
         //browser.pause(3000);
     }
     /**
@@ -37,4 +37,4 @@ class LoginPage extends Page {
     }
 }
 
-export default new LoginPage()
+export default new HomePage()

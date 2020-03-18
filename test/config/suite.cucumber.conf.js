@@ -3,7 +3,7 @@ const defaultTimeoutInterval = process.env.DEBUG ? (60 * 60 * 500) : 90000;
 exports.config = {
 
     specs: [
-        './test/features/*.feature',
+        './test/features/*fullpurchase.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -111,15 +111,15 @@ exports.config = {
     // the wdio-sync package. If you still want to run your tests in an async way
     // e.g. using promises you can set the sync option to false.
     sync: true,
-    logLevel: 'silent',     // Level of logging verbosity: silent | verbose | command | data | result | error
+    logLevel: 'error',     // Level of logging verbosity: silent | verbose | command | data | result | error
     coloredLogs: true,      // Enables colors for log output.
     screenshotPath: './test/reports/errorShots/',   // Saves a screenshot to a given path if a command fails.
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
     //baseUrl: 'http://localhost:8080',
-    baseUrl: 'http://www.phptravels.net',
-    waitforTimeout: 90000,            // Default timeout for all waitFor* commands.
+    baseUrl: 'https://auticontraining.azurewebsites.net/',
+    waitforTimeout: 5000,            // Default timeout for all waitFor* commands.
     connectionRetryTimeout: 90000,    // Default timeout in milliseconds for request  if Selenium Grid doesn't send response
     connectionRetryCount: 3,          // Default request retries count
 
